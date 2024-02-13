@@ -1,0 +1,95 @@
+
+<!doctype html><html><head><style type="text/css">* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: whitesmoke;
+}
+h2 {
+    text-align: center;
+    font-size: 3em;
+    color: #e94d58;
+    margin: 15px 0;
+}
+.btn-group {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+button {
+    position: absolute;
+    width: 150px;
+    height: inherit;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px gray;
+    border: 2px solid #e94d58;
+    font-size: 1.2em;
+}
+button:nth-child(1) {
+    margin-left: -200px;
+    background: #e94d58;
+}
+button:nth-child(2) {
+    margin-right: -200px;
+    background: white;
+    color: #e94d58;
+}
+</style></head><body><!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Я знаю,что сегодн 13е |R</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<h2 class="question"> Пойдешь пить пиво? </h2>
+		<img class="gif" alt="gif"  src="https://media3.giphy.com/media/63zO7mFVhdtoAOAfe5/giphy.gif?cid=ecf05e47ax81z99vkoatfrbe7udy4tmf5snn64gp03isfvzz&ep=v1_gifs_related&rid=giphy.gif&ct=s"/>
+		<div class="btn-group">
+			<button class="yes-btn">ДА  </button>
+			<button class="no-btn">Нет</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+
+</html><script type="text/javascript">const wrapper = document.querySelector(".wrapper");
+const question = document.querySelector(".question");
+const gif = document.querySelector(".gif");
+const yesBtn = document.querySelector(".yes-btn");
+const noBtn = document.querySelector(".no-btn");
+
+yesBtn.addEventListener("click", () => {
+  question.innerHTML = "Ты сделал правильный выбор! ";
+  gif.src =
+    "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNmVsNms2a3RtZ2NkZDlrbXowN2x4M2swbnBrZXY5eGV2c3RoZ3RzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/WTQI5O8xhl4RiSxwZ5/giphy.gif";
+});
+
+noBtn.addEventListener("mouseover", () => {
+  const noBtnRect = noBtn.getBoundingClientRect();
+  const maxX = window.innerWidth - noBtnRect.width;
+  const maxY = window.innerHeight - noBtnRect.height;
+
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
+
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
+});</script></body><html>
